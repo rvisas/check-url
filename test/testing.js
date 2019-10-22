@@ -5,10 +5,9 @@ const program = new commander.Command();
 
 program.version('1.0.0').description('Evaluation of URLs within markdown files');
 program.name('md-links').usage('[options]');
-program.option('-v, --validate', 'Valida las URLs identificadas');
-program.option('-s, --stats', 'Muestra estadisticas basicas sobre las URLs identificadas.');
+program.option('-r, --route <type>', 'Route to the folder or file to be examined');
+program.option('-v, --validate', 'Validate identified URLs');
+program.option('-s, --stats', 'Show basic statistics for the identified URLs.');
 program.parse(process.argv);
 
-for (let i = 0; i < process.argv.length; i++) {
-    console.log(`Index: ${i}, Item: ${process.argv[i]}`);
-};
+console.log(program.opts());
