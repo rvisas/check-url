@@ -11,4 +11,5 @@ program.option('-s, --stats', 'Show basic statistics for the identified URLs.');
 program.parse(process.argv);
 
 const options = program.opts();
+console.log(options);
 console.log(`Route:${options.route}, Validate:${options.validate}, Stats:${options.stats}`);
