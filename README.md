@@ -1,4 +1,4 @@
-# ayauri29@mdlinks
+# rvisa@mdlinks
 ![Build Status](https://img.shields.io/badge/nodeJs-100%25-green) ![Coverage Status](https://img.shields.io/badge/coverage-100%25-magenta) ![npm dependents](https://img.shields.io/badge/dependencias-5-pink)
 
 Md-links es una librería que brinda estadísticas sobre los links que se encuentren dentro de todos los archivos .md de una ruta dada.
@@ -9,10 +9,10 @@ Md-links es una librería que brinda estadísticas sobre los links que se encuen
 
 ### Instalación
 
-Instale ayauri29@mdlinks desde npm.
+Instale rvisa@mdlinks desde npm.
 
 ```bash
-npm i @ayauri29/md-links
+npm i @rvisa/md-links
 ```
 
 ### Uso

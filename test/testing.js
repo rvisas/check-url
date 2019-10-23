@@ -10,4 +10,5 @@ program.option('-v, --validate', 'Validate identified URLs');
 program.option('-s, --stats', 'Show basic statistics for the identified URLs.');
 program.parse(process.argv);
 
-console.log(program.opts());
+const options = program.opts();
+console.log(`Route:${options.route}, Validate:${options.validate}, Stats:${options.stats}`);
