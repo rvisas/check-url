@@ -1,4 +1,5 @@
 const route = require('./main.js');
+
 const validate = require('./validate.js');
 
 const mdLinks = (inputPath, options) => new Promise((resolve) => {
