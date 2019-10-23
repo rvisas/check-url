@@ -4,7 +4,7 @@ const mdLink = require('../src/md-links.js');
 const stat = require('../src/stats.js');
 
 const program = new commander.Command();
-program.version('1.0.0').description('Stadistics about markdown files');
+program.version('2.0.0').description('Stadistics about markdown files');
 program
   .name('md-links')
   .usage('[options]')
