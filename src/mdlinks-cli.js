@@ -1,17 +1,6 @@
-// const commander = require('commander');
 const chalk = require('chalk');
 const mdLink = require('../src/md-links.js');
-const stat = require('../src/stats.js');
-
-// const getOption = (option1, option2) => {
-//   if (option1 === '--validate' && option2 === undefined) {
-//     return { validate: true };
-//   }
-//   if (option1 === '--stats' && option2 === '--validate') {
-//     return { validate: true };
-//   }
-//   return { validate: false };
-// };
+const stats = require('../src/stats.js');
 
 const showCli = (options) => {
   mdLink.mdLinks(options.route, options)
@@ -21,10 +10,10 @@ const showCli = (options) => {
         output += chalk.yellow('No se encontraron links o archivos md.');
       }
       if ((options.stats) && (options.validate)) {
-        output = `\n${chalk.cyan('Total: ')} ${response.length} \n${chalk.cyan('Unique: ')} ${stat.uniquesLinks(response)} \n${chalk.cyan('Broken: ')} ${stat.brokenLinks(response)}`;
+        output = `\n${chalk.cyan('Total: ')} ${response.length} \n${chalk.cyan('Unique: ')} ${stats.uniquesLinks(response)} \n${chalk.cyan('Broken: ')} ${stats.brokenLinks(response)}`;
       }
       if ((options.stats) && (!options.validate)) {
-        output = `\n${chalk.cyan('Total: ')} ${response.length} \n${chalk.cyan('Unique: ')} ${stat.uniquesLinks(response)}`;
+        output = `\n${chalk.cyan('Total: ')} ${response.length} \n${chalk.cyan('Unique: ')} ${stats.uniquesLinks(response)}`;
       }
       if ((!options.stats) && (options.validate)) {
         response.forEach((objectLink) => {
